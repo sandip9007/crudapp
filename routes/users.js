@@ -6,7 +6,7 @@ const axios = require('axios')
 const userRoute = express.Router()
 
 userRoute.get('/', async (req, res)=>{
-    await axios.get('http://localhost:5020/users/').then((response)=>{
+    await axios.get('https://new-crud-app.herokuapp.com/users').then((response)=>{
     // console.log(response.data)
     res.render('home', {
         user : response.data
