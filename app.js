@@ -34,6 +34,9 @@ const port = process.env.PORT || 4400
 // app.use('/img', express.static(path.resolve(__dirname, 'assets/img')))
 
 
+app.get('/', (req, res)=>{
+    res.send('Working')
+})
 
 // //Load routers
 // app.use(router)
