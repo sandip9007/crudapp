@@ -5,12 +5,16 @@ const path = require('path')
 const userRoute = require('./routes/users')
 const urlEncode = bodyParser.urlencoded({ extended : true })
 const connectDB = require('./db/db')
+const multer = require('multer')
 // const connectDB = require('./server/database/connection')
 const app = express()
 
 
+//Set evironment 
 dotenv.config({ path : 'config.env'})
 const port = process.env.PORT || 4400
+
+
 
 //Set app enginee
 app.use(express.static(path.join(__dirname,'/public')))
@@ -24,6 +28,7 @@ app.use(urlEncode)
 
 //Load routers
 app.use(userRoute)
+
 connectDB()
 
 app.listen(port, ()=>{
