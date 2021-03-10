@@ -1,19 +1,12 @@
 // alert('Test')
 
-function onFormSubmit(e){
-    e.preventDefault()
-    if(e.target.elements['gender'][0].checked == true  || e.target.elements['gender'][1].checked == true){
-        console.log('Ok')
+function onFormSubmit(){
+    const name = document.querySelector('#name').value
+    const email = document.querySelector('#name').value
+    const gender = document.querySelector('input[name="gender"]:checked')
+    if(!name || !email || !gender){
+        alert("Please fill all the fields")
+        return false
     }
-    return false
-    // const value = document.querySelector('#name').value
-    // // const email = document.querySelector('#email').value
-    // // const gender = document.querySelector('#email').value
-    // if(!value){
-    //     // alert(e.target)
-    //     return false
-    // }else{
-    //     alert('Sucessful')
-    // } 
 }
 

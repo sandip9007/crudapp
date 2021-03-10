@@ -11,18 +11,17 @@
 <body>
    
     <div class="adduserContainer">
-
-    <h1>Add user</h1>
-    <p class="headerLink"><a href="/">Home</a></p>
+    <h1>Update user</h1>
+    <p class="headerLink"><a href="/">Home</a></p>   
     <form method="POST" action="" onsubmit="return onFormSubmit(event)">
-        <input type="text" name="name"  id="name"><br>
-        <input type="text" name="email" id="email"><br>
+        <input type="text" name="name"  id="name" value="<%= name  %>"><br>
+        <input type="text" name="email" id="email" value="<%= email  %>"><br>
         <label>Male</label>
-        <input type="radio" name="gender" value="Male">
+        <input type="radio" name="gender" value="Male" <%= gender == 'Male' ?'checked' : '' %>>
         <label>Female</label>
-        <input type="radio" name="gender" value="Female">
+        <input type="radio" name="gender" value="Female" <%= gender == 'Female' ?'checked' : '' %>>
         <br>
-        <input type="submit" value="Register" id='submit_form'>
+        <input type="submit" value="Register" id='submit_form' >
     </form>
     <p class="message"><%= message %></p>
     </div>

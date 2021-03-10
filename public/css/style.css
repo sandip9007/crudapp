@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
 body {
     /* background-color: aqua; */
     text-align: center;
@@ -5,6 +11,7 @@ body {
 .container{
     width: 800px;
     margin: auto;
+    margin-top: 25px;
 }
 .thead-dark{
     background: #07db91;
@@ -19,8 +26,45 @@ body {
 }
 
 tbody tr:hover {
-    background: darkgray;
+    background: #dbdbd9;
 }
 .dataTable{
     width: 100%;
+}
+
+input[type="text"] {
+      width :  350px;
+      height: 25px; 
+      padding: 5px;
+      margin: 5px;
+      box-sizing: border-box;
+}
+input[type="submit"] {
+    width :  350px;
+    height: 35px; 
+    padding: 5px;
+    margin: 5px;
+    background: #3dd944;
+    outline: none;
+    border: none;
+}
+
+.message{
+    color: red;
+}
+
+.headerLink{
+    text-align: left;
+    margin: 10px 0 10px 0;
+}
+
+.headerLink a {
+    
+}
+
+.adduserContainer{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 25px;
 }
