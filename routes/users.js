@@ -159,7 +159,7 @@ userRoute.get('/deleteuser', async (req, res, next)=>{
         await axios.get('https://new-crud-app.herokuapp.com/users').then((response)=>{
 
             console.log(response.data)
-            res.render('home', {
+            res.redirect('home', {
                 user : response.data
             })
 
